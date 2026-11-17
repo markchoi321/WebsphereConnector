@@ -1,0 +1,2 @@
+# 模拟 profile 的 SSL 客户端配置
+com.ibm.ssl.alias=DefaultSSLSettings

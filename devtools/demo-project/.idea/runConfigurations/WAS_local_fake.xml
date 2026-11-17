@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="WAS 本地（模拟）" type="WasCeServer" factoryName="Local">
+    <option name="installation" value="WAS 8.5.5.99（模拟）" />
+    <option name="profilePath" value="@FAKE_WAS@/profiles/AppSrv01" />
+    <option name="serverId" value="Cell01/Node01/server1" />
+    <option name="debugPort" value="17777" />
+    <option name="deployments" value="demo-ear&#9;demo&#9;&#9;package -DskipTests&#9;false&#10;" />
+    <method v="2" />
+  </configuration>
+</component>

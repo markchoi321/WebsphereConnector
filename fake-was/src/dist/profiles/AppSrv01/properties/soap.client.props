@@ -1,0 +1,3 @@
+# 模拟 profile 的 SOAP 客户端配置
+com.ibm.SOAP.securityEnabled=false
+com.ibm.SOAP.requestTimeout=180

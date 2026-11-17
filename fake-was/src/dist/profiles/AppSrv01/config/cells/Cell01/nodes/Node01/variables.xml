@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<variables:VariableMap xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:variables="http://www.ibm.com/websphere/appserver/schemas/5.0/variables.xmi" xmi:id="VariableMap_1">
+  <entries xmi:id="VariableSubstitutionEntry_1" symbolicName="USER_INSTALL_ROOT" value="@WAS_HOME@/profiles/AppSrv01" description="The filesystem path to the profile."/>
+  <entries xmi:id="VariableSubstitutionEntry_2" symbolicName="LOG_ROOT" value="${USER_INSTALL_ROOT}/logs" description="The filesystem path to the logs."/>
+  <entries xmi:id="VariableSubstitutionEntry_3" symbolicName="APP_INSTALL_ROOT" value="${USER_INSTALL_ROOT}/installedApps"/>
+</variables:VariableMap>

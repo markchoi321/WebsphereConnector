@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process:Server xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:process="http://www.ibm.com/websphere/appserver/schemas/5.0/process.xmi" xmlns:processexec="http://www.ibm.com/websphere/appserver/schemas/5.0/processexec.xmi" xmi:id="Server_1" name="server1">
+  <outputStreamRedirect xmi:id="StreamRedirect_1" fileName="${SERVER_LOG_ROOT}/SystemOut.log" rolloverType="SIZE" maxNumberOfBackupFiles="5" rolloverSize="1"/>
+  <errorStreamRedirect xmi:id="StreamRedirect_2" fileName="${SERVER_LOG_ROOT}/SystemErr.log" rolloverType="SIZE" maxNumberOfBackupFiles="5" rolloverSize="1"/>
+  <processDefinitions xmi:type="processexec:JavaProcessDef" xmi:id="JavaProcessDef_1" executableTargetKind="JAVA_CLASS" executableTarget="com.ibm.ws.runtime.WsServer">
+    <jvmEntries xmi:id="JavaVirtualMachine_1" verboseModeClass="false" verboseModeGarbageCollection="false" verboseModeJNI="false" runHProf="false" debugMode="false" debugArgs="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=7777" genericJvmArguments=""/>
+  </processDefinitions>
+</process:Server>

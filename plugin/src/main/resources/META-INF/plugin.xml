@@ -1,0 +1,39 @@
+<idea-plugin>
+    <id>com.wasce.websphere</id>
+    <name>WebSphere CE Connector</name>
+    <vendor>wasce</vendor>
+    <description><![CDATA[
+    Connects IntelliJ IDEA Community to IBM WebSphere Application Server 8.5:
+    local start/stop and debugging, attaching to running servers, remote connection.
+    No dependency on the Ultimate Java EE support.<br/>
+    在 IntelliJ IDEA Community 中连接 IBM WebSphere Application Server 8.5：本地启停与调试、连接已运行的服务器、远程连接。
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+    <depends>org.jetbrains.idea.maven</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <configurationType implementation="com.wasce.idea.run.WasConfigurationType"/>
+        <programRunner implementation="com.wasce.idea.run.WasProgramRunner"/>
+        <programRunner implementation="com.wasce.idea.run.WasDebugRunner"/>
+        <runDashboardDefaultTypesProvider implementation="com.wasce.idea.run.WasRunDashboardTypes"/>
+        <toolWindow id="WebSphere" anchor="bottom" secondary="true" icon="/icons/websphere.svg"
+                    factoryClass="com.wasce.idea.toolwindow.WasToolWindowFactory"/>
+        <notificationGroup id="WebSphere CE" displayType="BALLOON"/>
+        <applicationConfigurable parentId="tools" id="wasce.installations" displayName="WebSphere Servers"
+                                 instance="com.wasce.idea.settings.WasInstallationConfigurable"/>
+    </extensions>
+
+    <applicationListeners>
+        <listener class="com.wasce.idea.run.WasFrameListener"
+                  topic="com.intellij.openapi.application.ApplicationActivationListener"/>
+    </applicationListeners>
+
+    <actions>
+        <action id="WasCe.Update" class="com.wasce.idea.run.WasUpdateAction" text="Update WebSphere Application"
+                description="同步改动到 WebSphere 服务器">
+            <add-to-group group-id="RunMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>

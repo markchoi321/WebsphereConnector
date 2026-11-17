@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 模拟 WAS 版本文件，仅用于插件开发 -->
+<product name="IBM WebSphere Application Server">
+  <id>BASE</id>
+  <version>8.5.5.99</version>
+  <build-info date="9/27/26" level="fake"/>
+</product>

@@ -1,0 +1,3 @@
+#!/bin/sh
+# 模拟"WAS 自带 JRE"，转发到本机 JDK 8
+exec "@JAVA8_HOME@/bin/java" "$@"

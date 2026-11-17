@@ -1,0 +1,22 @@
+# 构建与 IDE
+.gradle/
+build/
+out/
+.idea/
+*.iml
+.intellijPlatform/
+.DS_Store
+target/
+
+# 演示工程的运行配置需要随仓库提供
+!devtools/demo-project/.idea/
+
+# 设计文档不纳入版本库
+docs/
+
+# 本地工具配置
+.claude/
+
+# 官方插件仅作参考，不纳入版本库
+javaee-appServers-websphere/
+javaee-appServers-websphere-*.zip
